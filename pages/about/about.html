@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Calculator
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+  <h2>Personal Loan Calculator</h2>
+ 
+ <ion-item> 
+   <ion-label>Loan Amount</ion-label>
+   <ion-input type="number" min="0" max="infinity" [(ngModel)]="loanAmount"></ion-input>
+ </ion-item>
+
+  <ion-item> 
+   <ion-label>Loan Term</ion-label>
+   <ion-input type="number" min="12" max="24" step="1" [(ngModel)]="loanTerm"></ion-input>
+ </ion-item>
+
+  <ion-item> 
+   <ion-label>Monthly Interest Rate</ion-label>
+   <ion-input type="number" [(ngModel)]="interestRate"></ion-input>
+ </ion-item>
+
+ <button ion-button color="primary" (click)="compute()">Compute</button>
+
+<br /> <br />
+ <ion-item *ngIf="interestPayable">
+   <h3> Total Interest Payable: {{interestPayable}} </h3>
+ </ion-item>
+
+   <ion-item *ngIf="totalAmount">
+   <h3> Total Amount Payable: {{totalAmount}} </h3>
+   </ion-item>
+
+   <ion-item *ngIf="monthlyPayment">
+   <h3> Monthly Payment: {{monthlyPayment}} </h3>
+   </ion-item>
