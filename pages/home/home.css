@@ -1,0 +1,22 @@
+img{
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+ion-content{
+ background: linear-gradient(to right, #bdc3c7, #2c3e50);
+}
+
+h2{
+  font-size: 33px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+h5{
+  font-size: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
